@@ -8,4 +8,10 @@ export default {
       titleTemplate: "%s",
     };
   },
+  head: (
+    <>
+      <link rel="manifest" href="/manifest.json" />
+      <meta name="theme-color" content="#d3d3d3" />
+    </>
+  ),
 };
