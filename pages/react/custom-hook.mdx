@@ -1,0 +1,68 @@
+# 커스텀훅에 대해 설명해주세요
+
+커스텀훅을 통해 **중복된 로직을 재활용**할 수 있다.
+
+이를 활용하여 **응집도는 높이고 결합도는 낮추는 방향**으로 설계가 가능하다.
+
+> More importantly, the code inside them describes what they want to do rather than how to do it.
+
+`how`(수행하는 방법)보다는 `what`(수행하는 작업)을 설명한다.
+
+> Custom Hooks let you share stateful logic but not state itself.
+> Each call to a Hook is completely independent from every other call to the same Hook.
+
+상태 저장 로직을 공유할 수 있지만 상태 자체는 공유할 수 없다.
+Hook에 대한 각각의 호출은 동일한 Hook에 대한 다른 모든 호출과 완전히 독립적이다.
+
+## 내용
+
+## Hooks이란?
+
+함수 컴포넌트에서 **상태 관리와 생명 주기**를 다룰 수 있게 해주는 기술이다.
+
+### 클래스 컴포넌트의 문제
+
+> Classes confuse both people and machines
+
+#### 재사용성
+
+컴포넌트 상태 로직과 관심사 분리가 어렵다.
+유지보수 및 테스팅에서도 어려움을 겪게 된다.
+
+이에 HOC를 사용할 수 있지만 `Wrapper Hell`로 인해 코드의 추적이 어려워질 수 있다.
+
+#### this
+
+`this`는 방식이 복잡하며 동작 방식이 다양해 예상치 못한 에러를 발생시킨다.
+예를 들어 리렌더링시 `this`가 가리키는 값이 변경될 수 있다.
+
+### Hooks의 등장
+
+기존 함수 컴포넌트는 상태를 가지지 못했다.
+리렌더링될 때 함수 안에 작성된 모든 코드가 재실행되어 가지고 있던 상태를 전혀 관리할 수 없었다.
+
+이를 Hooks를 통해 해결할 수 있게 되었다.
+`closure`를 이용하여 함수 컴포넌트 바깥에 상태를 저장한다.
+컴포넌트 바깥에 선언된 변수이기 때문에 업데이트 후에도 함수 컴포넌트에서 상태에 접근이 가능해진다.
+
+## GPT로 문장 정리하기
+
+> 커스텀훅에 대해 설명해줘
+
+- 커스텀훅의 장점
+  - 상태 로직의 재사용
+  - 코드의 가독성과 유지보수성 향상
+  - 컴포넌트 크기 감소
+- 커스텀훅의 조건
+  - `use` 키워드로 시작
+  - React 내장 훅을 사용하여 상태 로직 구현
+  - 커스텀훅 반환
+
+## 키워드 정리
+
+- 재사용성
+- 응집도 향상 및 결합도 감소
+
+## 참고 자료
+
+- [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
