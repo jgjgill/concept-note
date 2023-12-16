@@ -3,5 +3,6 @@
   "javascript": "JavaScript",
   "typescript": "TypeScript",
   "react": "React",
-  "network": "Network"
+  "network": "Network",
+  "web": "Web"
 }
