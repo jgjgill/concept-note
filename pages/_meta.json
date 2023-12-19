@@ -4,5 +4,6 @@
   "typescript": "TypeScript",
   "react": "React",
   "network": "Network",
-  "web": "Web"
+  "web": "Web",
+  "cs": "CS"
 }
